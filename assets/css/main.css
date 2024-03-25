@@ -495,7 +495,6 @@ section {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/03.jpeg") center center / cover no-repeat;
   position: relative;
   padding: 120px 0;
   z-index: 3;
@@ -514,10 +513,14 @@ section {
 }
 
 .hero:before {
-  position: absolute;
   content: "";
-  
-  inset: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; /* Adjusted to 60% of the screen width */
+  background-image: url('../img/03.jpeg'); /* URL of the image */
+  background-size: 60%;
+  background-position: right; /* Align the background image to the left */
 }
 
 @media (max-width: 1034px) {
